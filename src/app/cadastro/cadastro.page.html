@@ -1,0 +1,33 @@
+<ion-header [translucent] ="true">
+  <ion-toolbar color="red">
+  <ion-title class="ion-text-center" >Cadastro</ion-title>
+  <ion-buttons slot="start">
+  <ion-back-button defaultHref ="/login"></ion-back-button >
+  </ion-buttons >
+  </ion-toolbar >
+  </ion-header>
+  <ion-content [fullscreen] ="true">
+  <!-- Obs.: Importar o ReactiveFormsModule para o módulo da página -->
+  <form (ngSubmit)="cadastrar()" [formGroup] ="formGroup">
+  <ion-card color="light" class="ion-text-center" >
+  <ion-card-header >
+  <ion-card-title >FAZER CADASTRO</ion-card-title>
+</ion-card-header>
+<ion-card-content >Entrar com e-mail e senha. </ion-card-content >
+</ion-card> <br>
+<ion-card color="light">
+<ion-card-header >
+<ion-card-subtitle >e-mail :</ion-card-subtitle >
+<input type="text" formControlName ="email"/>
+<ion-card-subtitle >Senha :</ion-card-subtitle >
+<input type="password" formControlName ="senha" />
+</ion-card-header >
+</ion-card>
+<div class="ion-text-center" >
+<ion-button color="danger" type="submit" value="Savar">Novo
+Cadastro
+<ion-icon slot="end" name="save-outline" ></ion-icon>
+</ion-button>
+</div>
+</form>
+</ion-content>
